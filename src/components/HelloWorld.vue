@@ -1,4 +1,5 @@
 <script setup>
+import Header from './Header.vue'
 defineProps({
   msg: {
     type: String,
@@ -8,6 +9,7 @@ defineProps({
 </script>
 
 <template>
+  <Header />
   <div class="greetings">
     <h1 class="green">{{ msg }}</h1>
     <h3>
