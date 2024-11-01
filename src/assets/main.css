@@ -1,35 +1,163 @@
-@import './base.css';
-
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  font-weight: normal;
+.header {
+    background-color: #1e1c2a;
 }
 
-a,
-.green {
-  text-decoration: none;
-  color: hsla(160, 100%, 37%, 1);
-  transition: 0.4s;
-  padding: 3px;
+.logo {
+    width: 3rem;
+    height: auto;
 }
 
-@media (hover: hover) {
-  a:hover {
-    background-color: hsla(160, 100%, 37%, 0.2);
-  }
+div {
+    font-family: 'Poppins', sans-serif;
 }
 
-@media (min-width: 1024px) {
-  body {
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+.content-fade {
+    opacity: 0; /* Inici amb opacitat 0 */
+    animation: fadeIn 2s forwards; /* Animació de 2 segons */
+}
+
+.footer {
+    background-color: #1e1c2a;
     display: flex;
-    place-items: center;
-  }
+    justify-content: center;
+    align-items: center;
+}
 
-  #app {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 0 2rem;
-  }
+.icon-style {
+    display: inline-block; /* Assegura que ocupi espai */
+    width: 24px;           /* Defineix una amplada mínima */
+    height: 24px;          /* Defineix una altura mínima */
+}
+
+.background {
+    background-color: #1e1c2a;
+}
+
+
+/* Calculadora */
+.btn {
+
+    width: auto;           /* Amplada fixa per a cada botó */
+    height: 52px;          /* Altura fixa per a cada botó */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.25rem;    /* Mida de la font més petita */
+    transition: background-color 0.3s;
+    border: 2px solid #000;
+    border-radius: 0.375rem;
+}
+
+.display {
+    border: 3px solid #000;
+    border-radius: 0.375rem;
+}
+
+.num {
+    background-color: #f3f4f6; /* Color per als botons numèrics */
+}
+
+.num:hover {
+    background-color: #9b9999; /* Color de fons quan es passa el cursor */
+}
+
+.oper {
+    background-color: #dea048;    /* Color per als botons d'operació */
+    color: #fff;               /* Color del text per als botons d'operació */
+}
+
+.oper:hover {
+    background-color: #95722e; /* Color de fons quan es passa el cursor */
+}
+
+
+/* Api JSON*/
+.comment-container {
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    justify-content: center;
+    margin: 1rem;
+    padding: 1rem;
+    border: 3px solid #333;
+    border-radius: 0.375rem;
+    background-color: #f3f4f6;
+    transition: 0.2s;
+}
+
+.comment-container:hover{
+    transform: scale(1.05) !important;
+}
+
+.contingut {
+    border: 3px solid #000;
+    border-radius: 0.375rem;
+    background-color: #5a62c9;
+}
+
+.comment-container .correu {
+    align-self: flex-end; /* Alinea el correu a la dreta dins del contenidor */
+    text-align: right; /* Text del correu a la dreta */
+    width: 100%; /* Fa que el correu ocupi tota l'amplada disponible */
+}
+
+
+/* Axios */
+.users-container {
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Centra el contingut verticalment */
+    justify-content: space-between; /* Espai entre text i imatge */
+    margin: 1rem;
+    padding: 1rem;
+    border: 3px solid #333;
+    border-radius: 0.375rem;
+    background-color: #f3f4f6;
+    transition: 0.2s;
+}
+
+.users-container:hover{
+    transform: scale(1.05) !important;
+}
+
+.content {
+    flex: 1; /* Fa que el contingut ocupi l'espai restant */
+    text-align: left; /* Alinea el text a l'esquerra */
+}
+
+.male-gender {
+    background-color: #2076e6; /* Blau */
+    color: white;
+    padding: 0.2rem;
+    border: 2px solid #000;
+    border-radius: 0.2rem;
+    display: inline-block; /* Fa que el fons ocupi només l'espai del text */
+    text-transform: uppercase; /* Converteix el text a majúscules */
+}
+
+.female-gender {
+    background-color: #f57cef; /* Rosa */
+    color: white;
+    padding: 0.2rem;
+    border: 2px solid #000;
+    border-radius: 0.2rem;
+    display: inline-block; /* Fa que el fons ocupi només l'espai del text */
+    text-transform: uppercase; /* Converteix el text a majúscules */
+}
+
+.imatge {
+    border: 3px solid #333;
+    border-radius: 0.375rem;
+    margin-left: 1rem; /* Separa la imatge del text */
+    object-fit: cover;
 }

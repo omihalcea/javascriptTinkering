@@ -1,85 +1,24 @@
 <template>
-  <div class="bg-gray-900 p-8 flex items-center justify-center min-h-screen animation-fade-color">
-    <div class="text-left content-fade animate-fade-in">
-      <h1 class="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl">Discover new</h1>
-      <h1 class="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl"> great
-        <a href="/films"
-           class="text-purple-400 hover:text-purple-600 transition duration-300 underline-hover">Films</a> or
-      </h1>
-      <h1 class="text-white text-3xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-9xl">
-        <a href="/videogames" class="text-purple-400 hover:text-purple-600 transition duration-300 underline-hover">Videogames</a>
-      </h1>
+  <div class="flex flex-wrap">
+    <div class="w-full sm:w-8/12 mb-10">
+      <div class="container mx-auto h-full sm:p-10">
+        <div class="container px-4 lg:flex mt-10 items-center h-full lg:mt-0">
+          <div class="w-full">
+            <h1 class="text-4xl lg:text-6xl font-bold text-gray-300">Una pàgina <span class="text-yellow-400">sorprenent</span> i plena de sorpreses</h1>
+            <div class="w-20 h-2 bg-yellow-400 my-4"></div>
+            <p class="text-xl text-gray-300 mb-10">En aquesta pàgina trobaràs tres seccions completament diferents. En la primera t'espera una calculadora completament funcional, a la segona una pàgina on es despleguen els comentaris d'una API i la tercera una pàgina on es despleguen comentaris d'una API a través a AXIOS.</p>
+            <button onclick="window.location.href='/calculadora'" class="text-yellow-400 bg-gray-500 text-2xl font-medium px-4 py-2 rounded shadow">Comence'm</button>
+          </div>
+        </div>
+      </div>
     </div>
+    <img src="https://i.pinimg.com/564x/c2/cd/2d/c2cd2d57d5100cc80b0373deb3a44c2d.jpg" alt="Leafs" class="w-full h-48 object-cover sm:h-screen sm:w-4/12">
   </div>
 </template>
 
 <script>
-export default {
-  name: 'HomeView'
-}
 </script>
 
 <style scoped>
-body {
-  font-family: 'Poppins', sans-serif;
-}
 
-/* Animació per a la transició d'opacitat del text*/
-@keyframes fadeIn {
-  from {
-    opacity: 0;
-  }
-  to {
-    opacity: 1;
-  }
-}
-
-/* Animació per a la transició de color de fons */
-@keyframes fadeColor {
-  0% {
-    background-color: #000000; /* bg-gray-900 */
-  }
-  100% {
-    background-color: #100f17; /* Canvia a negre */
-  }
-}
-
-.animation-fade-color {
-  animation: fadeColor 2s forwards; /* Animació del canvi de color de fons */
-}
-
-/* Aplicar l'animació al contingut */
-.content-fade {
-  opacity: 0; /* Inici amb opacitat 0 */
-  animation: fadeIn 5s forwards; /* Animació de 2 segons */
-}
-
-.underline-hover {
-  position: relative;
-  color: #b48ce0; /* Color morat per defecte */
-  text-decoration: none;
-  transition: color 0.3s ease;
-}
-
-.underline-hover::after {
-  content: '';
-  position: absolute;
-  width: 100%;
-  height: 6px;
-  bottom: 0;
-  left: 0;
-  background-color: #7c3aed; /* Manté el color morat a la subratllada */
-  visibility: hidden;
-  transform: scaleX(0);
-  transition: all 0.3s ease-in-out;
-}
-
-.underline-hover:hover::after {
-  visibility: visible;
-  transform: scaleX(1);
-}
-
-.header {
-  color: #100F17;
-}
 </style>
