@@ -1,5 +1,6 @@
 import { mount } from '@vue/test-utils';
-import calculadora from '@/views/CalculadoraView.vue'; // Canvia el camí al component de la teva calculadora
+import calculadora from '@/views/CalculadoraView.vue';
+import { describe, expect, beforeEach, it} from "vitest";
 
 describe('Calculator.vue', () => {
     let wrapper;

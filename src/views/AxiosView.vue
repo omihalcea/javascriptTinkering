@@ -6,7 +6,7 @@ const posts = ref([]);
 const colors = ['#08DEAA', '#F31199', '#8473FF'];
 
 onMounted(() => {
-  axios.get('https://dummyjson.com/users')
+    axios.get('https://dummyjson.com/users')
       .then(response => {
         posts.value = response.data.users;
       })
@@ -46,7 +46,3 @@ onMounted(() => {
     </div>
   </div>
 </template>
-
-<style scoped>
-
-</style>
