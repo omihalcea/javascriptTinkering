@@ -14,7 +14,7 @@ const appendToDisplay = (value) => {
     const lastChar = display.value.slice(-1);
 
     // No fem res si tant l'últim caràcter com el nou valor són operadors
-    if (['X', '/', '+', '-', '(', ')', '.'].includes(lastChar) && ['X', '/', '+', '-', '(', ')', '.'].includes(value)) {
+    if (['x', '/', '+', '-', '.'].includes(lastChar) && ['x', '/', '+', '-', '.'].includes(value)) {
       return;
     } else {
       // Afegim el nou valor a la pantalla
@@ -64,31 +64,32 @@ const calculateResult = () => {
 
       <!-- Botons numèrics i d'operació -->
       <div class="grid grid-cols-4 gap-4 items-center">
-        <button @click="appendToDisplay('(')" class="btn oper">(</button>
-        <button @click="appendToDisplay(')')" class="btn oper">)</button>
-        <button @click="clearDisplay('C')" class="btn bg-red-500 hover:bg-red-700 text-white">C</button>
-        <button @click="clearLast('AC')" class="btn bg-green-500 hover:bg-green-700 text-white">AC</button>
+        <button @click="appendToDisplay('(')" class="btn oper" value="(">(</button>
+        <button @click="appendToDisplay(')')" class="btn oper" value=")">)</button>
+        <button @click="clearDisplay('C')" class="btn bg-red-500 hover:bg-red-700 text-white" value="C">C</button>
+        <button @click="clearLast('AC')" class="btn bg-green-500 hover:bg-green-700 text-white" value="AC">AC</button>
         <!-- Números -->
-        <button @click="appendToDisplay('7')" class="btn num">7</button>
-        <button @click="appendToDisplay('8')" class="btn num">8</button>
-        <button @click="appendToDisplay('9')" class="btn num">9</button>
-        <button @click="appendToDisplay('/')" class="btn oper">÷</button>
+        <button @click="appendToDisplay('7')" class="btn num" value="7">7</button>
+        <button @click="appendToDisplay('8')" class="btn num" value="8">8</button>
+        <button @click="appendToDisplay('9')" class="btn num" value="9">9</button>
+        <button @click="appendToDisplay('/')" class="btn oper" value="/">÷</button>
 
-        <button @click="appendToDisplay('4')" class="btn num">4</button>
-        <button @click="appendToDisplay('5')" class="btn num">5</button>
-        <button @click="appendToDisplay('6')" class="btn num">6</button>
-        <button @click="appendToDisplay('x')" class="btn oper">×</button>
+        <button @click="appendToDisplay('4')" class="btn num" value="4">4</button>
+        <button @click="appendToDisplay('5')" class="btn num" value="5">5</button>
+        <button @click="appendToDisplay('6')" class="btn num" value="6">6</button>
+        <button @click="appendToDisplay('x')" class="btn oper" value="x">×</button>
 
-        <button @click="appendToDisplay('1')" class="btn num">1</button>
-        <button @click="appendToDisplay('2')" class="btn num">2</button>
-        <button @click="appendToDisplay('3')" class="btn num">3</button>
-        <button @click="appendToDisplay('-')" class="btn oper">-</button>
+        <button @click="appendToDisplay('1')" class="btn num" value="1">1</button>
+        <button @click="appendToDisplay('2')" class="btn num" value="2">2</button>
+        <button @click="appendToDisplay('3')" class="btn num" value="3">3</button>
+        <button @click="appendToDisplay('-')" class="btn oper" value="-">-</button>
 
-        <button @click="appendToDisplay('0')" class="btn num">0</button>
-        <button @click="appendToDisplay('.')" class="btn num">.</button>
-        <button @click="calculateResult" class="btn bg-blue-500 hover:bg-blue-600 text-white">=</button>
-        <button @click="appendToDisplay('+')" class="btn oper">+</button>
+        <button @click="appendToDisplay('0')" class="btn num" value="0">0</button>
+        <button @click="appendToDisplay('.')" class="btn num" value=".">.</button>
+        <button @click="calculateResult" class="btn bg-blue-500 hover:bg-blue-600 text-white" value="=">=</button>
+        <button @click="appendToDisplay('+')" class="btn oper" value="+">+</button>
       </div>
+
     </div>
   </div>
 </template>
